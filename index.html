@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DesignMe - Join the Waitlist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
@@ -40,13 +39,13 @@
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #00FFD1;
       margin: 0;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #B2FEF7;
       margin: 0.5rem 0;
     }
@@ -104,53 +103,52 @@
       font-size: 0.95rem;
     }
 
-.waitlist-form {
-  background-color: none; #102A43!;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  max-width: 1000px;
-  width: 100%;
-  margin: 2rem auto;
-  display: flex;
-  justify-content: center;
-}
+    .waitlist-form {
+      background-color: transparent;
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      width: 100%;
+      margin: 2rem auto;
+      display: flex;
+      justify-content: center;
+    }
 
-.form-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap; /* This allows stacking on small screens */
-  width: 70%;
-}
+    .form-group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 700px;
+    }
 
-.form-group input[type="email"] {
-  flex: 2;
-  min-width: 200px;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-}
+    .form-group input[type="email"] {
+      flex: 2;
+      min-width: 220px;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
 
-.form-group button {
-  flex: 1;
-  min-width: 120px;
-  padding: 0.75rem;
-  background-color: #00B8A9;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #ffffff;
-  cursor: pointer;
-}
+    .form-group button {
+      flex: 1;
+      min-width: 140px;
+      padding: 0.75rem;
+      background-color: #00B8A9;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #ffffff;
+      cursor: pointer;
+    }
 
-.form-group button:hover {
-  background-color: #009688;
-}
+    .form-group button:hover {
+      background-color: #009688;
+    }
 
     footer {
       margin: 3rem 0 1rem;
@@ -164,10 +162,41 @@
       font-size: 0.85rem;
       margin-bottom: 1rem;
     }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .form-group {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .form-group input,
+      .form-group button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        width: 220px;
+      }
+    }
   </style>
 </head>
-
 <body>
+
   <header>
     <img class="logo" src="https://res.cloudinary.com/dreamsavvy/image/upload/v1747323397/designMe_Logo-removebg-preview_ntdaxb.png" alt="DesignMe Logo"/>
     <h1>Design Made Easy</h1>
@@ -205,28 +234,21 @@
     </div>
   </section>
 
-  <!-- ✅ FORM WITH FORMSPREE -->
+  <!-- ✅ Waitlist Form -->
   <form class="waitlist-form" action="https://formspree.io/f/mkgrkevy" method="POST">
-  <div class="form-group">
-    <input type="email" name="email" placeholder="Enter your email to join the waitlist" required />
-    <button type="submit">Join the Waitlist</button>
-  </div>
-</form>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Enter your email to join the waitlist" required />
+      <button type="submit">Join the Waitlist</button>
+    </div>
+  </form>
 
   <footer>
     &copy; 2025 DesignMe. All rights reserved.
-    <div class="contact">Contact us: <a href="mailto:info@designme.africa" style="color:#00FFD1">info@designme.africa</a></div>
+    <div class="contact">
+      Contact us: 
+      <a href="mailto:info@designme.africa" style="color:#00FFD1">info@designme.africa</a>
+    </div>
   </footer>
 
-  <script>
-    function sendEmail(event) {
-      event.preventDefault();
-      const email = document.getElementById("user-email").value;
-      const subject = encodeURIComponent("DesignMe Waitlist Signup");
-      const body = encodeURIComponent("Please add this email to the waitlist:\n\n" + email);
-      window.location.href = `mailto:info@designme.africa?subject=${subject}&body=${body}`;
-    }
-  </script>
 </body>
-
 </html>
