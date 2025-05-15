@@ -1,50 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>designMe - Create with Ease</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DesignMe - Join the Waitlist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0B1F3A;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 0 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #00FFD1;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #B2FEF7;
+    }
+
+    .waitlist-form {
+      background-color: #102A43;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .waitlist-form input[type="email"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .waitlist-form button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #00B8A9;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .waitlist-form button:hover {
+      background-color: #009688;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #B2FEF7;
+    }
+
+    .contact {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-    <header class="bg-yellow-500 text-white p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">designMe</h1>
-            <nav class="space-x-4">
-                <a href="#features" class="hover:underline">Features</a>
-                <a href="#templates" class="hover:underline">Templates</a>
-                <a href="#contact" class="hover:underline">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <main class="py-16 px-6 text-center">
-        <h2 class="text-4xl font-bold mb-4">Design like a pro, without being one.</h2>
-        <p class="text-lg mb-6">Create stunning designs with culturally relevant templates and AI-powered assistance.</p>
-        <a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-600">Get Started</a>
-    </main>
-    <section id="features" class="py-12 bg-gray-100 px-6">
-        <div class="container mx-auto">
-            <h3 class="text-3xl font-semibold mb-6 text-center">Key Features</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                <div class="bg-white p-6 rounded shadow">
-                    <h4 class="font-bold text-lg mb-2">AI-Powered Assistant</h4>
-                    <p>Generate content ideas, correct designs, and save time with AI guidance built for beginners.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow">
-                    <h4 class="font-bold text-lg mb-2">Culturally Relevant Templates</h4>
-                    <p>Design for African audiences with local festival, business, and event themes.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow">
-                    <h4 class="font-bold text-lg mb-2">Beginner-Friendly Interface</h4>
-                    <p>No learning curve. Drag, drop, edit, and share instantly.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer id="contact" class="bg-gray-800 text-white py-6 text-center">
-        <p>Contact us at <a href="mailto:support@designme.africa" class="underline">support@designme.africa</a></p>
-        <p>&copy; 2025 designMe. All rights reserved.</p>
-    </footer>
+
+<body>
+  <header>
+    <h1>DesignMe</h1>
+    <p>Empowering creativity through culturally relevant tools for non-designers in Africa.</p>
+    <p>Be the first to explore our design platform when the MVP is ready!</p>
+  </header>
+
+  <form class="waitlist-form">
+    <input type="email" placeholder="Enter your email to join the waitlist" required />
+    <button type="submit">Join the Waitlist</button>
+  </form>
+
+  <footer>
+    &copy; 2025 DesignMe. All rights reserved.
+    <div class="contact">Contact us: <a href="mailto:info@designme.africa" style="color:#00FFD1">info@designme.africa</a></div>
+  </footer>
 </body>
+
 </html>
